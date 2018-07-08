@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import DRect from '../src/components/DRect'
 import DPie from '../src/components/DPie'
+import Home from '../src/components/home'
 Vue.use(Router)
 
 // 加载路由
@@ -21,6 +22,11 @@ let router = new Router({
       path: '/DPie',
       component: DPie,
       name: DPie
+    },
+    {
+      path: '/Home',
+      component: Home,
+      name: Home
     }
   ]
 })

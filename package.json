@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "d3": "^3.5.17",
+    "node-sass": "^4.9.1",
+    "sass-loader": "^7.0.3",
     "save": "^2.3.2",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
