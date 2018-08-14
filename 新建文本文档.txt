@@ -1,0 +1,38 @@
+// 变量泄露问题
+var arr = [];
+for (var i = 0; i < 10; i++) {
+  arr[i] = function () {
+    console.log(i);
+  }
+}
+a[5]();
+// let解决办法
+const arr = [];
+for (let i = 0; i < 10; i++) {
+  arr[i] = function () {
+    console.log(i);
+  }
+}
+a[5]();
+// 模板字符串
+const year = new Date().getFullYear();
+const month = new Date().getMonyj();
+const day = new Date().getDay();
+const date = year + '年' + month + '月' + day + '日'; //es5
+const date = `${year}年${month}月${day}日`;
+// 数组去重
+let arr = [1, 5, 6, 1, 8, 6, 7];
+arr = arr.filter((a, i) => arr.indexOf(a) === i)
+arr = [...new Set(arr)];
+arr = Array.from(new Set(arr));
+// 数组的并集、交集和差集
+let a = new Set([1, 2, 3]);
+let b = new Set([2, 3, 4]);
+const union = new Set([...a, ...b]);
+const intersect = new Set([...a].filter(x => b.has(x)));
+const difference = new Set([...a].filter(x => !b.has(x)));
+
+// 编程建议
+// 常量，函数用const定义，其它用let定义，尽量不要使用var.(优先顺序：const => let => var)
+// 静态字符串使用单引号，动态字符串使用反引号.
+

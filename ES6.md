@@ -134,5 +134,32 @@ const [a, b, c, d, e] = 'hello'
 
 （4）数值、布尔值和函数参数的结构赋值
 
-三.字符串的扩展.
+三.Set和Map.
+
+（1）Set，类数组，区别：值唯一，没有重复的值。
+
+```
+const a = new Set([1, 4, 7, 7, 74, 4]);
+a.add(5);
+a.has(4);
+a.delete(7);
+a.clear();
+a.size;
+```
+
+（2）Map，类似对象，区别：属性可以为非字符串。
+
+对象：字符串-值
+
+Map：值-值
+
+```
+const b = new Map();
+const o = { p: 'hello world' }
+b.set(o, 'content');
+b.get(o);
+b.has(o);
+b.delete(o);
+b.size;
+```
 
